@@ -211,7 +211,7 @@ export default class ModalDropdown extends Component {
         >
           <TouchableWithoutFeedback accessible={accessible}
                                     disabled={!showDropdown}
-                                    onPress={this._onModalPress}
+                                    onPressIn={this._onModalPress}
           >
             <View style={styles.modal}>
               <View style={[styles.dropdown, dropdownStyle, frameStyle]}>
