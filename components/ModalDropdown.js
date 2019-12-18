@@ -170,7 +170,7 @@ export default class ModalDropdown extends Component {
       <TouchableOpacity ref={button => this._button = button}
                         disabled={disabled}
                         accessible={accessible}
-                        onPress={this._onButtonPress}
+                        onPressIn={this._onButtonPress}
       >
         {
           children ||
@@ -327,7 +327,7 @@ export default class ModalDropdown extends Component {
     if (TOUCHABLE_ELEMENTS.find(name => name == row.type.displayName)) {
       const props = {...row.props};
       props.key = preservedProps.key;
-      props.onPress = preservedProps.onPress;
+      props.onPressIn = preservedProps.onPress;
       const {children} = row.props;
       switch (row.type.displayName) {
         case 'TouchableHighlight': {
